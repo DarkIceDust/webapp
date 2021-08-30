@@ -1,0 +1,39 @@
+{
+  "Usuarios": [
+	{
+	  "Nombre": "Pedro",
+	  "Apellidos": "Gutiérrez Ramírez",
+	  "Telefono": 922234859,
+	  "Correo": "pedroramirez4@hotmail.com",
+	  "FechaNacimiento": "1995-06-09"
+	},
+	{
+	  "Nombre": "Lidia",
+	  "Apellidos": "Pérez López",
+	  "Telefono": 834678922,
+	  "Correo": "lidiaplopez@hotmail.com",
+	  "FechaNacimiento": "1985-12-29"
+	},
+	{
+	  "Nombre": "Juan José",
+	  "Apellidos": "González Pino",
+	  "Telefono": 236874590,
+	  "Correo": "jjgonzlez@gmail.com",
+	  "FechaNacimiento": "1969-03-04"
+	},
+		{
+	  "Nombre": "Mark",
+	  "Apellidos": "Gómez López",
+	  "Telefono": 896045830,
+	  "Correo": "mkglop@gmail.com",
+	  "FechaNacimiento": "2000-03-25"
+	},
+		{
+	  "Nombre": "María",
+	  "Apellidos": "Gómez Núñez",
+	  "Telefono": 789340257,
+	  "Correo": "mgn24@gmail.com",
+	  "FechaNacimiento": "1973-05-20"
+	}
+  ]
+}

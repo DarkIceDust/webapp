@@ -1,0 +1,149 @@
+<!-- 
+	Aquí escribiremos el código en XML, ya que será la parte visual del programa. 
+	Especificamos el nombre del controlador de esta vista, junto con las referencias a los
+	espacios de nombres.Luego añadimos un botón, con su texto y con un evento, que al pulsar el botón
+	se activará.
+	Por último, un input cuyo valor será el que tenga /recipient/name del archivo App.controller.js,
+	con una descripción que se mostrará a la derecha, un valueLiveUpdate que permitirá ver los cambios
+	realizados de forma inmediata, y el ancho que es un 60%.
+
+<mvc:View
+   controllerName="sap.ui.demo.walkthrough.controller.App"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <Button
+      text="Say Hello"
+      press=".onShowHello"/>
+    <Input
+    	value="{/recipient/name}"
+    	description="Hello {/recipient/name}"
+    	valueLiveUpdate="true"
+    	width="60%"/>
+</mvc:View>
+
+-->
+
+<!-- 
+Ahora ocurre igual que antes solo que al haber realizado los cambios correspondientes
+y usar el modelo i18n, cambiaremos el text por el valor de i18n que hace referencia a 
+showHelloButtonText.
+-->
+<!-- 
+<mvc:View
+   controllerName="sap.ui.demo.walkthrough.controller.App"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <Button
+      text="{i18n>showHelloButtonText}"
+      press=".onShowHello"/>
+    <Input
+    	value="{/recipient/name}"
+    	description="Hello {/recipient/name}"
+    	valueLiveUpdate="true"
+    	width="60%"/>
+</mvc:View>
+-->
+
+<!-- 
+Ahora añadimos un displayBlock, y varias páginas para que se vea algo más estructurado.
+El botón y el input lo ponemos dentro de un tag content.
+-->
+<!-- 
+<mvc:View
+   controllerName="sap.ui.demo.walkthrough.controller.App"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc"
+  displayBlock="true">
+  <Shell>
+   <App>
+      <pages>
+         <Page title="{i18n>homePageTitle}">
+            <content>
+               <Panel
+                	headerText="{i18n>helloPanelTitle}">
+                  <content>
+
+                     <Button
+                        text="{i18n>showHelloButtonText}"
+                        press=".onShowHello"/>
+                     <Input
+                        value="{/recipient/name}"
+                        description="Hello {/recipient/name}"
+                        valueLiveUpdate="true"
+                        width="60%"/>
+                  </content>
+               </Panel>
+            </content>
+         </Page>
+      </pages>
+   </App>
+   </Shell>
+</mvc:View>
+-->
+
+<!-- 
+Ahora añadiremos un XMLView, y nos crearemos otra vista distinta.
+-->
+
+<!--
+<mvc:View
+   controllerName="sap.ui.demo.walkthrough.controller.App"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc"
+  displayBlock="true">
+  <Shell>
+   <App class="myAppDemoWT">
+      <pages>
+         <Page title="{i18n>homePageTitle}">
+            <content>
+               <Panel
+                	class="sapUiResponsiveMargin"
+                	width="auto">
+                  <content>
+						<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.HelloPanel"/>
+						<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.InvoiceList"/>
+                  </content>
+               </Panel>
+            </content>
+         </Page>
+      </pages>
+   </App>
+   </Shell>
+</mvc:View>
+-->
+
+<!--
+<mvc:View
+   controllerName="sap.ui.demo.walkthrough.controller.App"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc"
+  displayBlock="true">
+  <Shell>
+   <App class="myAppDemoWT">
+      <pages>
+         <Page title="{i18n>homePageTitle}">
+            <content>
+               <Panel
+                	class="sapUiResponsiveMargin"
+                	width="auto">
+                  <content>
+						<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.InvoiceList"/>
+                  </content>
+               </Panel>
+            </content>
+         </Page>
+      </pages>
+   </App>
+   </Shell>
+</mvc:View>
+-->
+
+<mvc:View
+		controllerName="sap.ui.demo.walkthrough.controller.App"
+		xmlns="sap.m"
+		xmlns:mvc="sap.ui.core.mvc"
+		displayBlock="true">
+<Shell>
+	<App class="myAppDemoWT" id="app"/>
+</Shell>
+</mvc:View>

@@ -1,0 +1,53 @@
+<!--
+<mvc:View
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		title="{i18n>detailPageTitle}">
+		<ObjectHeader
+			title="Introduzca sus nuevos datos, por favor."/>
+		<Text text="{i18n>ColumnaNombre}"/>
+		<Text text="{i18n>ColumnaApellidos}"/>
+		<ObjectNumber number="{i18n>ColumnaTelefono}"/>
+		<Text text="{i18n>ColumnaEmail}"/>
+	</Page>
+</mvc:View>
+-->
+
+<mvc:View
+	controllerName="sap.ui.demo.walkthrough.controller.Detail"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		id="page"
+		title="{i18n>TituloDetalles}"
+		showNavButton="true"
+		navButtonPress=".onNavBack">
+		<ObjectHeader
+			title="Introduzca sus nuevos datos, por favor."/>
+				<Text text="{i18n>TituloNombre}"/>
+        		<Input
+        			value="{usuarios>Nombre}"/>
+        		<Text text="{i18n>TituloApellidos}"/>
+        		<Input
+        			value= "{usuarios>Apellidos}"/>
+				<ObjectNumber number="{i18n>TituloTelefono}" emphasized="false"/>
+				<Input
+        			value= "{usuarios>Telefono}"/>
+				<Text text="{i18n>TituloCorreo}"/>
+				<Input
+					type="Email"
+        			value= "{usuarios>Correo}"/>
+				<Text text="{i18n>TituloFecha}"/>
+				<Input
+					type="Date"
+        			value= "{usuarios>FechaNacimiento}"/>
+        		<Button
+        			class="btn btn-success"
+        			text="{i18n>BotonGuardar}"
+        			press=".onSave"/>
+        		<Button
+        			text="{i18n>BotonCancelar}"
+        			press=".onNavBack"/>
+	</Page>
+</mvc:View>
